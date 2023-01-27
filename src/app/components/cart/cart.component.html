@@ -1,1 +1,43 @@
-<p>cart works!</p>
+<section class="cart">
+  <div class="container">
+    <div class="p-5">
+      <h3 class="text-xl font-bold my-3">Cart</h3>
+
+      <!-- cart grid -->
+      <div class="cart-grid grid grid-cols-12 gap-4">
+        <div class="cart-area col-span-8 bg-gray-50 p-5 flex flex-col w-full">
+          <app-cart-item></app-cart-item>
+          <app-cart-item></app-cart-item>
+        </div>
+        <div class="cart-summary-area col-span-4 bg-gray-50 p-5">
+          <h3 class="text-lg font-bold">Cart Summary</h3>
+          <ul class="my-4">
+            <li class="border-b w-full flex items-center justify-between p-2">
+              <span class="text-gray-500">Items</span>
+              <span class="text-gray-500">5 pcs</span>
+            </li>
+            <li class="border-b w-full flex items-center justify-between p-2">
+              <span class="text-gray-500">Subtotal</span>
+              <span class="text-gray-500">$200</span>
+            </li>
+            <li class="border-b w-full flex items-center justify-between p-2">
+              <span class="text-gray-500">Tax %</span>
+              <span class="text-gray-500">$5</span>
+            </li>
+            <li class="border-b w-full flex items-center justify-between p-2">
+              <span class="text-gray-500">Grand Total</span>
+              <span class="text-gray-500">$500</span>
+            </li>
+          </ul>
+          <button
+            class="btn btn-primary w-full bg-teal-500 text-teal-50 p-3 mt-3"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+
+      <!-- card item -->
+    </div>
+  </div>
+</section>

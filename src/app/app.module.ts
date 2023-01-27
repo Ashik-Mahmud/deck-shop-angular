@@ -10,6 +10,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
+import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthModule } from './auth/auth.module';
     LoginComponent,
     RegisterComponent,
     CartComponent,
+    CartItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, AuthModule],
   providers: [],
