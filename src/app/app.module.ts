@@ -8,6 +8,8 @@ import { ProductComponent } from './components/products/product/product.componen
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FormsModule } from '@angular/forms';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { CartComponent } from './components/cart/cart.component';
     RegisterComponent,
     CartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],
 })
