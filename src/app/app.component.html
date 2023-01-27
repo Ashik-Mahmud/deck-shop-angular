@@ -1,21 +1,56 @@
-<main>
-  <nav class="navbar navbar-expand navbar-light bg-light bg-teal-600 py-5">
+<main class="font-sans">
+  <nav class="navbar navbar-expand navbar-light bg-light bg-teal-100 py-5">
     <menu class="container flex items-center justify-between">
-      <a class="navbar-brand text-xl font-bold text-white">Deck Shop</a>
-      <ul class="nav nav-pills flex items-center gap-5">
+      <a class="navbar-brand text-xl font-bold text-teal-500" routerLink="/"
+        >Deck Shop</a
+      >
+      <ul class="nav nav-pills flex items-center gap-6">
         <li>
           <a
-            class="nav-link text-gray-100 hover:text-white transition-all"
-            [routerLink]="['/welcome']"
+            class="nav-link text-teal-600 hover:text-teal-800 transition-all"
+            [routerLink]="['/home']"
             >Home</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="nav-link text-teal-600 hover:text-teal-800 transition-all"
+            [routerLink]="['/products']"
+            >Product List</a
           >
         </li>
         <li>
           <a
-            class="nav-link text-gray-100 hover:text-white transition-all"
-            [routerLink]="['/products']"
-            >Product List</a
+            class="nav-link text-teal-600 hover:text-teal-800 transition-all"
+            [routerLink]="['/login']"
+            >Login</a
           >
+        </li>
+        <li>
+          <a
+            class="nav-link text-teal-600 hover:text-teal-800 transition-all"
+            [routerLink]="['/register']"
+            >Register</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-teal-600 hover:text-teal-800 transition-all"
+            routerLink="/cart"
+          >
+            Cart
+            <sup
+              class="bg-teal-200 text-teal-600 w-5 h-5 inline-grid place-items-center rounded-full"
+            >
+              <span> 5 </span>
+            </sup>
+          </a>
+        </li>
+        <li>
+          <button class="bg-teal-500 text-teal-50 p-1 px-3 rounded-sm">
+            Logout
+          </button>
         </li>
       </ul>
     </menu>

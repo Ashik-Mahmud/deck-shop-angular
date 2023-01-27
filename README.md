@@ -2,13 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
-# Using Technologies
+## Using Technologies
 
 - Angular
 - TailwindCSS
 - Karma
 
-# Features
+## Features
 
 - Many Features will be available in future.
 
