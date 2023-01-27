@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* container custom classes */
+.container {
+  max-width: min(100%, 1200px);
+  margin-inline: auto;
+
+  @media screen and (max-width: 768px) {
+    padding-inline: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
