@@ -1,22 +1,27 @@
 <!-- tailwind card for single product -->
 
 <div class="card p-2 bg-teal-50 border-8 border-white rounded-sm">
-  <div class="card-image">
+  <div class="card-image w-full h-40">
     <img
-      src="https://i.dummyjson.com/data/products/3/1.jpg"
-      alt=""
-      height="350"
+      [src]="product?.thumbnail"
+      [alt]="product?.title"
+      class="w-full h-full object-cover"
     />
   </div>
-  <div class="details">
+  <div class="details mt-2">
     <h3 class="text-md font-semibold">
-      <a href="#">Product Name</a>
+      <a href="#">{{ product?.title }}</a>
     </h3>
     <div class="flex items-center justify-between text-sm">
       <span>
-        <a href="#" class="text-teal-500">Category</a>
+        <a href="#" class="text-teal-500">{{ product?.category }}</a>
       </span>
-      <span> price : <span class="text-green-500"> $ 100 </span> </span>
+      <span>
+        price :
+        <span class="text-green-500">
+          {{ product?.price | currency : "BDT" : "symbol-narrow" : "1.2-2" }}
+        </span>
+      </span>
     </div>
     <div class="actions text-sm flex items-center justify-between mt-2">
       <button class="bg-gray-50 text-gray-500 p-1 px-2 rounded">

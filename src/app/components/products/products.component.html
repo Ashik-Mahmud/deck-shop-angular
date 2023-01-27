@@ -3,9 +3,7 @@
     <!-- header -->
     <div class="header flex items-center justify-between">
       <div>
-        <h1 class="text-4xl font-bold text-teal-500">
-          Products {{ products?.length }}
-        </h1>
+        <h1 class="text-4xl font-bold text-teal-500">Products</h1>
         <p class="text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quae.
@@ -22,10 +20,14 @@
 
     <!-- products -->
     <div class="my-5">
+      <div *ngIf="!isLoading">loading...</div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        *ngIf="isLoading"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2"
       >
-        <app-product></app-product>
+        <ng-template ngFor let-product [ngForOf]="products" let-i="index">
+          <app-product [product]="product"></app-product>
+        </ng-template>
       </div>
     </div>
   </div>

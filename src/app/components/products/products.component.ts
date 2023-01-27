@@ -9,6 +9,7 @@ import { ProductService } from './product.service';
 })
 export class ProductsComponent implements OnInit {
   products: Product[] | any = [];
+  isLoading: boolean = false;
 
   constructor(private productService: ProductService) {}
 
@@ -17,5 +18,7 @@ export class ProductsComponent implements OnInit {
     products.then((data) => {
       this.products = data;
     });
+    this.isLoading = this.productService.isLoading;
+    console.log(this.products, this.isLoading);
   }
 }
